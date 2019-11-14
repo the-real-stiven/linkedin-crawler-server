@@ -11,4 +11,8 @@ callback = (req, res) => {
 
 app.post('/', callback);
 
+app.get('/', function(req, res) {
+  res.send(JSON.stringify({ Hello: 'World' }));
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
